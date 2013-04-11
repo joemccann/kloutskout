@@ -37,7 +37,7 @@ $(document).ready(function(){
       $inputName.val( strip( $inputName.val() ) ) 
 
       // Validate inputs
-      if( $inputName.val().length < 2 ){
+      if( !$inputName.val().length ){
         log('Bad name.')
         $inputName
           .val('')
@@ -66,10 +66,20 @@ $(document).ready(function(){
         
         $('#contact-response-container').find('p').remove()
 
-        $('#contact-response-container').append('<p class="'+ responseMessageClass +'">Klout Score for '
+        var message;
+
+        if(r.error){
+          message = '<p class="'+ responseMessageClass 
+                      +'">Ruh-roh, looks like something went awry or this user has no score.</p>'
+        }
+        else{
+          message = '<p class="'+ responseMessageClass +'">Klout Score for '
           +r.username
           +' is: <strong>'
-          +Math.round(r.message)+'</strong></p>')
+          +Math.round(r.message)+'</strong></p>'
+        }
+        
+        $('#contact-response-container').append(message)
         
       }) // end post
       
