@@ -1,0 +1,72 @@
+@import 'variables'
+
+fieldset
+  border none
+  margin 0 auto
+  background transparent
+  padding 0
+
+input[type='name'],
+input[type='email'],
+textarea,
+#connect-button
+  width 100%
+
+#connect-button span
+  font-size 1.4em
+  height 2.4em
+  padding 9px 12px
+
+input[type='name'],
+input[type='email'],
+textarea
+  min-height 36px
+  padding 4% 4%
+  font-size 1.4em
+  color $black
+  outline none
+  background-color lighten($grey,20)
+  border none
+  font-family: 'Brandon Regular', Helvetica, Arial
+  normTransition(all 0.30s ease-in-out)
+
+normPlaceholdercolor($black, 'Brandon Regular', Helvetica, Arial, sans-serif)
+
+input[type='name']:focus,
+input[type='email']:focus,
+textarea:focus
+  outline 2px solid $blue
+
+#contact-form-container
+  width 100%
+  background-color $grey
+  margin 0
+
+#contact-form-container,
+#contact-response-container
+  max-width 480px
+
+#contact-form
+  margin 5% auto
+  padding 5%
+
+.form-item
+  padding 3.5% 0
+  margin 0 auto
+
+.form-item:last-child
+  margin 0% auto 2%
+
+.successful-submission
+  background-color lighten($blue,10)
+
+.failed-submission
+  background-color lighten($red,10)
+
+.successful-submission,
+.failed-submission
+  padding 1% 0
+  text-align center
+
+form .error
+  border $red 4px solid

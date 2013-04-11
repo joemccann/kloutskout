@@ -1,0 +1,264 @@
+@import 'variables'
+@import 'normalize'
+
+*,
+*:after,
+*:before
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+
+*
+  -webkit-transition: all 0.3s ease
+  -moz-transition: all 0.3s ease
+  -o-transition: all 0.3s ease
+  transition: all 0.3s ease
+
+html, body
+  height 100%
+
+body
+  font-size: 100%
+  font-family: 'Brandon Bold', Helvetica, Arial, sans-serif
+  background-color $white
+  color $black
+  
+img
+  max-width 100%
+
+nav
+  float right
+  margin-top 1%
+
+a
+  color: $blue
+  text-decoration none
+
+nav a
+  color: $black
+  border-top 1px solid $black
+  margin 0 .5em /* setting % here is a bug in Chrome's layout engine */ 
+  font-family: 'Brandon Regular', Helvetica, Arial, sans-serif
+  font-size 1em
+  font-weight normal
+
+p, li
+  font-size 1.6em
+  margin 0
+  padding 0
+  font-family: 'Brandon Thin', Helvetica, Arial, sans-serif
+
+h1
+  font-size 3em
+  font-weight normal
+  line-height 1.2
+  border-top 4px solid lighten($black,30)
+  color lighten($black,30)
+
+h2
+  font-size 2.4em
+  font-weight 200
+  line-height 1.1
+  font-family: 'Brandon Regular', Helvetica, Arial, sans-serif
+  margin 0
+  
+
+h3
+  font-size 1.3333em
+  font-family: 'Brandon Regular', Helvetica, Arial, sans-serif
+  
+ul
+  list-style-type none
+  margin 0
+  padding 0
+  
+li
+  margin 2% 0
+
+header
+  position relative
+  overflow hidden
+
+footer
+  background-color $footerColor
+  margin 0% auto
+  text-align center
+  width: 100%
+
+footer p
+  color $white
+  font-size 1.2em
+
+#container
+  margin 3% auto 0
+  width 100%
+
+#logo-container
+  display inline-block
+  float left
+
+#nav-container
+  min-height 100px
+
+#tagline
+  clear both
+  min-height 240px
+
+#tagline p
+  font-family: 'Brandon Thin', Helvetica, Arial, sans-serif
+  font-size 2.8em
+
+#what
+  background-color $blue
+
+#what-copy
+  color $white
+  font-size 1.2em
+  display inline
+
+#what-image
+  border 4px solid $white
+  width 100%
+
+#what-copy-container
+  width: 39%
+  display: inline-block
+  float: left
+  margin: 13% 0 5%
+
+#what-image-container
+  display inline-block
+  width 53%
+  margin 5% 0 5% 7%
+
+#what-image
+  margin-top 4%
+
+#who
+  background-color $white
+
+#how
+  background-color $grey
+
+#logo
+  display inline-block
+  margin 0 auto
+  text-align left
+
+#who-container 
+  overflow auto
+  width 100%
+  margin-bottom 9%
+
+#who-copy
+  width 60%
+  display inline-block
+  float left
+
+#who-image
+  margin 0
+  float right
+  background-color $yellow
+  border 1px solid $black
+
+#footer-copy-container
+  padding 3%
+  overflow-y auto
+
+#footer-social
+  float left
+  width 50%
+  text-align left
+
+#footer-blog
+  float right
+  width 50%
+  text-align right
+
+
+.triangle
+  position: absolute
+
+.triangle.yellow
+  normTransformOrigin(bottom right)
+
+.triangle.red
+  normTransformOrigin(top left)
+
+.triangle.blue
+  normTransformOrigin(bottom left)
+
+
+.block
+  display block
+
+.red
+  color $red
+
+.blue
+  color $blue
+
+.yellow
+  color $yellow
+
+.black
+  color $black
+
+.grey
+  color $grey
+
+.invert-black-yellow 
+  background $black
+  color $yellow
+  padding 0 2%
+
+.large
+  font-size 150%
+  line-height 0
+
+.larger
+  font-size 200%
+  line-height 0
+
+.largest
+  font-size 300%
+  line-height 0
+
+.opacity75
+  normOpacity(75)
+
+.no-touch a:hover
+  color: darken($blue,20)
+
+.louder
+  color $linkColor
+  font-size 1.125em
+
+.headerShadowBox
+  -webkit-box-shadow: 0 8px 6px -6px rgba(0,0,0, 0.56)
+  -moz-box-shadow: 0 8px 6px -6px black
+  -webkit-box-shadow: 0 1px 6px 1px rgba(0,0,0, 0.56)
+
+.maxwidthcenter
+  width 96%
+  max-width $maxwidth
+  margin 0 auto
+  padding 0 2%
+
+.justify
+  text-align justify
+
+.centerShadowBox
+  boxShadow(8px 8px 6px -6px rgba(0,0,0, 0.56))
+  margin 0 auto
+
+.no-touch a.red:hover
+  color darken($red,20)
+
+.opacity75
+  normOpacity(75)
+
+@import 'forms'  
+@import 'buttons'
+@import 'blog'
+@import 'responsive'
