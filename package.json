@@ -18,7 +18,10 @@
   "devDependencies": {
     "smoosh": ">=0.4.0",
     "walkdir": ">=0.0.5",
-    "semver": ">=1.1.4"    
+    "semver": ">=1.1.4"
   },
-  "subdomain": "kloutskout"
+  "subdomain": "kloutskout",
+  "engines": {
+    "node": "0.8.x"
+  }
 }

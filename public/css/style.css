@@ -226,15 +226,6 @@ a {
   color: #009ed3;
   text-decoration: none;
 }
-nav a {
-  color: #000;
-  border-top: 1px solid #000;
-  margin: 0 0.5em;
-/* setting % here is a bug in Chrome's layout engine */
-  font-family: 'Brandon Regular', Helvetica, Arial, sans-serif;
-  font-size: 1em;
-  font-weight: normal;
-}
 p,
 li {
   font-size: 1.6em;
@@ -246,7 +237,6 @@ h1 {
   font-size: 3em;
   font-weight: normal;
   line-height: 1.2;
-  border-top: 4px solid #4d4d4d;
   color: #4d4d4d;
 }
 h2 {
@@ -286,111 +276,10 @@ footer p {
   margin: 3% auto 0;
   width: 100%;
 }
-#logo-container {
-  display: inline-block;
-  float: left;
-}
-#nav-container {
-  min-height: 100px;
-}
-#tagline {
-  clear: both;
-  min-height: 240px;
-}
-#tagline p {
-  font-family: 'Brandon Thin', Helvetica, Arial, sans-serif;
-  font-size: 2.8em;
-}
-#what {
-  background-color: #009ed3;
-}
-#what-copy {
-  color: #fff;
-  font-size: 1.2em;
-  display: inline;
-}
-#what-image {
-  border: 4px solid #fff;
-  width: 100%;
-}
-#what-copy-container {
-  width: 39%;
-  display: inline-block;
-  float: left;
-  margin: 13% 0 5%;
-}
-#what-image-container {
-  display: inline-block;
-  width: 53%;
-  margin: 5% 0 5% 7%;
-}
-#what-image {
-  margin-top: 4%;
-}
-#who {
-  background-color: #fff;
-}
-#how {
-  background-color: #939393;
-}
 #logo {
   display: inline-block;
   margin: 0 auto;
   text-align: left;
-}
-#who-container {
-  overflow: auto;
-  width: 100%;
-  margin-bottom: 9%;
-}
-#who-copy {
-  width: 60%;
-  display: inline-block;
-  float: left;
-}
-#who-image {
-  margin: 0;
-  float: right;
-  background-color: #fbfe07;
-  border: 1px solid #000;
-}
-#footer-copy-container {
-  padding: 3%;
-  overflow-y: auto;
-}
-#footer-social {
-  float: left;
-  width: 50%;
-  text-align: left;
-}
-#footer-blog {
-  float: right;
-  width: 50%;
-  text-align: right;
-}
-.triangle {
-  position: absolute;
-}
-.triangle.yellow {
-  -webkit-transform-origin: bottom right;
-  -moz-transform-origin: bottom right;
-  -o-transform-origin: bottom right;
-  -ms-transform-origin: bottom right;
-  transform-origin: bottom right;
-}
-.triangle.red {
-  -webkit-transform-origin: top left;
-  -moz-transform-origin: top left;
-  -o-transform-origin: top left;
-  -ms-transform-origin: top left;
-  transform-origin: top left;
-}
-.triangle.blue {
-  -webkit-transform-origin: bottom left;
-  -moz-transform-origin: bottom left;
-  -o-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-  transform-origin: bottom left;
 }
 .block {
   display: block;
@@ -751,362 +640,52 @@ button span {
   font-style: normal;
 }
 @media only screen and (max-width: 160em) {
-  .triangle.yellow {
-    -webkit-transform: translate(245%, -100%);
-    -moz-transform: translate(245%, -100%);
-    -o-transform: translate(245%, -100%);
-    -ms-transform: translate(245%, -100%);
-    transform: translate(245%, -100%);
-  }
-  .blue {
-    -webkit-transform: translate(0%, 5%);
-    -moz-transform: translate(0%, 5%);
-    -o-transform: translate(0%, 5%);
-    -ms-transform: translate(0%, 5%);
-    transform: translate(0%, 5%);
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 120em) {
-  .triangle.yellow {
-    -webkit-transform: translate(255%, -100%);
-    -moz-transform: translate(255%, -100%);
-    -o-transform: translate(255%, -100%);
-    -ms-transform: translate(255%, -100%);
-    transform: translate(255%, -100%);
-  }
-  .blue {
-    -webkit-transform: translate(0%, 5%);
-    -moz-transform: translate(0%, 5%);
-    -o-transform: translate(0%, 5%);
-    -ms-transform: translate(0%, 5%);
-    transform: translate(0%, 5%);
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 90em) {
-  .triangle.yellow {
-    -webkit-transform: translate(267%, -100%);
-    -moz-transform: translate(267%, -100%);
-    -o-transform: translate(267%, -100%);
-    -ms-transform: translate(267%, -100%);
-    transform: translate(267%, -100%);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  .triangle.red {
-    -webkit-transform: translate(0%, 0%);
-    -moz-transform: translate(0%, 0%);
-    -o-transform: translate(0%, 0%);
-    -ms-transform: translate(0%, 0%);
-    transform: translate(0%, 0%);
-  }
-  #social_container {
-    margin: 5% 0;
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 78em) {
-  .triangle.yellow {
-    -webkit-transform: translate(267%, -100%);
-    -moz-transform: translate(267%, -100%);
-    -o-transform: translate(267%, -100%);
-    -ms-transform: translate(267%, -100%);
-    transform: translate(267%, -100%);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  #contact-header {
-    width: 62%;
-  }
-  #contact-form-container {
-    width: 38%;
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 64em) {
-  .triangle.yellow {
-    -webkit-transform: translate(267%, -100%);
-    -moz-transform: translate(267%, -100%);
-    -o-transform: translate(267%, -100%);
-    -ms-transform: translate(267%, -100%);
-    transform: translate(267%, -100%);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  #contact-header {
-    width: 60%;
-  }
-  #contact-form-container {
-    width: 40%;
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 56em) {
-  .triangle.yellow {
-    -webkit-transform: translate(205%, -100%);
-    -moz-transform: translate(205%, -100%);
-    -o-transform: translate(205%, -100%);
-    -ms-transform: translate(205%, -100%);
-    transform: translate(205%, -100%);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  #what-copy-container {
-    margin-top: 9%;
-  }
-  #contact-header {
-    width: 55%;
-  }
-  #contact-form-container {
-    width: 45%;
-  }
-  #who-copy {
-    width: 50%;
-  }
-  #who-container {
-    margin-bottom: 7%;
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 48em) {
-  .triangle.yellow {
-    -webkit-transform: translate(185%, -100%);
-    -moz-transform: translate(185%, -100%);
-    -o-transform: translate(185%, -100%);
-    -ms-transform: translate(185%, -100%);
-    transform: translate(185%, -100%);
+  body {
+    display: initial;
   }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  #what-copy-container {
-    margin-top: 8%;
-  }
-  #contact-header {
-    padding-top: 10%;
-  }
-  h2 {
-    font-size: 2.2em;
-    line-height: 1;
-  }
-  h3 {
-    font-size: 1.1em;
-  }
-}
-#who-container {
-  padding-top: 8%;
-  margin-bottom: 7%;
-}
-#who-copy {
-  margin-top: 25%;
-  padding: 0 10%;
-}
-#who-image {
-  width: 50%;
-  max-width: 320px;
 }
 @media only screen and (max-width: 40em) {
-  nav a {
-    margin: 0 0.75em;
-/* setting % here is a bug in Chrome's layout engine */
-    padding: 0 0 0.75em;
-/* make target bigger */
-  }
-  #what-copy-container {
-    margin-top: 8%;
-    float: none;
-  }
-  .triangle.yellow {
-    -webkit-transform: translate(125%, -100%) scale(0.75, 0.75);
-    -moz-transform: translate(125%, -100%) scale(0.75, 0.75);
-    -o-transform: translate(125%, -100%) scale(0.75, 0.75);
-    -ms-transform: translate(125%, -100%) scale(0.75, 0.75);
-    transform: translate(125%, -100%) scale(0.75, 0.75);
-  }
-  .triangle.red {
-    -webkit-transform: translate(0%, 0%) scale(0.75, 0.75);
-    -moz-transform: translate(0%, 0%) scale(0.75, 0.75);
-    -o-transform: translate(0%, 0%) scale(0.75, 0.75);
-    -ms-transform: translate(0%, 0%) scale(0.75, 0.75);
-    transform: translate(0%, 0%) scale(0.75, 0.75);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  h2 {
-    text-align: center;
-  }
-  h3 {
-    text-align: justify;
-  }
-  #who-container {
-    padding-top: 12%;
-  }
-  #who-copy {
-    width: 35%;
-    margin-top: 20%;
-    padding: 0 5%;
-    font-size: 1.4em;
-  }
-  #contact-header {
-    width: 100%;
-    float: none;
-    padding: 6% 3% 0% 3%;
-  }
-  #contact-form-container {
-    width: 100%;
-    float: none;
-    padding: 0% 3% 0% 3%;
-  }
-  #contact-form {
-    margin: 0 auto;
-  }
-  #social_container {
-    margin: 10% 0;
-  }
-  .blog h1 {
-    font-size: 2em;
-    padding: 5% 0 0;
-    margin-bottom: 4%;
-  }
-  .blog blockquote {
-    margin: 0;
-    font-size: 1.2em;
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 30em) {
-  #container {
-    margin: 10% auto 0;
-  }
-  #tagline p {
-    font-size: 2.6em;
-  }
-  .triangle.yellow {
-    -webkit-transform: translate(25%, -100%) scale(0.5, 0.5);
-    -moz-transform: translate(25%, -100%) scale(0.5, 0.5);
-    -o-transform: translate(25%, -100%) scale(0.5, 0.5);
-    -ms-transform: translate(25%, -100%) scale(0.5, 0.5);
-    transform: translate(25%, -100%) scale(0.5, 0.5);
-  }
-  .triangle.red {
-    -webkit-transform: translate(25%, 0%) scale(0.5, 0.5);
-    -moz-transform: translate(25%, 0%) scale(0.5, 0.5);
-    -o-transform: translate(25%, 0%) scale(0.5, 0.5);
-    -ms-transform: translate(25%, 0%) scale(0.5, 0.5);
-    transform: translate(25%, 0%) scale(0.5, 0.5);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  #logo-container {
-    display: block;
-    float: none;
-    text-align: center;
-  }
-  nav {
-    float: none;
-    margin-top: 5%;
-    text-align: center;
-  }
-  #tagline {
-    margin: 5% auto 0;
-    max-width: 240px;
-  }
-  #what-copy-container {
-    display: block;
-    width: 80%;
-    margin: 0 auto;
-    padding: 8% 0 0;
-    text-align: center;
-  }
-  #what-copy {
-    font-weight: bold;
-  }
-  #what-image-container {
-    width: 100%;
-    margin: 2% 0 10% 0;
-  }
-  #who-container {
-    text-align: center;
-    padding-top: 2%;
-  }
-  #who-copy {
-    padding: 0% 2%;
-    margin: 15% auto 5%;
-    width: 100%;
-    float: none;
-    display: block;
-  }
-  #who-image {
-    float: none;
-    display: block;
-    margin: 0 auto;
-  }
-  #footer-social,
-  #footer-blog {
-    float: none;
-    width: 100%;
-    text-align: center;
-    margin: 5% auto;
-  }
-  .last-paragraph {
-    padding-top: 5%;
+  body {
+    display: initial;
   }
 }
 @media only screen and (max-width: 20em) {
-  .triangle.yellow {
-    -webkit-transform: translate(10%, -100%) scale(0.5, 0.5);
-    -moz-transform: translate(10%, -100%) scale(0.5, 0.5);
-    -o-transform: translate(10%, -100%) scale(0.5, 0.5);
-    -ms-transform: translate(10%, -100%) scale(0.5, 0.5);
-    transform: translate(10%, -100%) scale(0.5, 0.5);
-  }
-  .triangle.red {
-    -webkit-transform: translate(12%, 0%) scale(0.5, 0.5);
-    -moz-transform: translate(12%, 0%) scale(0.5, 0.5);
-    -o-transform: translate(12%, 0%) scale(0.5, 0.5);
-    -ms-transform: translate(12%, 0%) scale(0.5, 0.5);
-    transform: translate(12%, 0%) scale(0.5, 0.5);
-  }
-  .blue {
-    -webkit-transform: translate(10%, 5%);
-    -moz-transform: translate(10%, 5%);
-    -o-transform: translate(10%, 5%);
-    -ms-transform: translate(10%, 5%);
-    transform: translate(10%, 5%);
-  }
-  nav {
-    margin-top: 9%;
-  }
-  #what-image-container {
-    width: 100%;
-    margin: 5% 0 10% 0;
+  body {
+    display: initial;
   }
 }
