@@ -3,305 +3,63 @@
 /* 1em = 16px */
 
 /* 2560px */
-$yellowTransition = translate(245%, -100%)
-$blueTransition = translate(0%, 5%)
 @media only screen and (max-width: 160em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
+  body
+    display initial
 
 /* 1920px */
-$yellowTransition = translate(255%, -100%)
 @media only screen and (max-width: 120em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
+  body
+    display initial
 
 /* 1440px */
-$yellowTransition = translate(267%, -100%)
-$blueTransition = translate(10%, 5%)
-$redTransition = translate(0%, 0%)
 @media only screen and (max-width: 90em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  .triangle.red
-    normTransform($redTransition)
-
-  #social_container
-    margin 5% 0
+  body
+    display initial
 
 /* 1248px */
-$yellowTransition = translate(267%, -100%)
-$blueTransition = translate(10%, 5%)
 @media only screen and (max-width: 78em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  #contact-header
-    width 62%
-
-  #contact-form-container
-    width 38%
-
-
+  body
+    display initial
   
 /* 1024px */
-$yellowTransition = translate(267%, -100%)
-$blueTransition = translate(10%, 5%)
 @media only screen and (max-width: 64em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  #contact-header
-    width 60%
-
-  #contact-form-container
-    width 40%
-
+  body
+    display initial
 
 
 /* 896px */
-$yellowTransition = translate(205%, -100%) 
-
 @media only screen and (max-width: 56em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  #what-copy-container
-    margin-top: 9%
-
-  #contact-header
-    width 55%
-  
-  #contact-form-container
-    width 45%
-
-  #who-copy
-    width 50%
-
-  #who-container
-    margin-bottom 7%
+  body
+    display initial
 
 /* 768px */
-$yellowTransition = translate(185%, -100%) 
 @media only screen and (max-width: 48em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  #what-copy-container
-    margin-top: 8%
-
-  #contact-header
-    padding-top 10%
-
-  h2
-    font-size 2.2em
-    line-height 1
-
-  h3
-    font-size 1.1em
-
- #who-container
-    padding-top 8%
-    margin-bottom 7%
-
-  #who-copy
-    margin-top 25%
-    padding 0 10%
-
-  #who-image
-    width 50%
-    max-width 320px
+  body
+    display initial
 
 /* 640px */
-$yellowTransition = translate(125%, -100%) scale(0.75,0.75)
-$redTransition = translate(0%, 0%) scale(0.75,0.75)
 @media only screen and (max-width: 40em)
 
-  nav a
-    margin 0 .75em /* setting % here is a bug in Chrome's layout engine */ 
-    padding 0 0 .75em /* make target bigger */
-
-  #what-copy-container
-    margin-top: 8%
-    float none
-
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .triangle.red
-    normTransform($redTransition)
-
-  .blue
-    normTransform($blueTransition)
-  
-  h2
-    text-align center
-
-  h3
-    text-align justify
-
-  #who-container
-    padding-top 12%
-
-  #who-copy
-    width 35%
-    margin-top 20%
-    padding 0 5%
-    font-size 1.4em
-
-  #contact-header
-    width 100%
-    float none
-    padding 6% 3% 0% 3%
-
-  #contact-form-container
-    width 100%    
-    float none
-    padding 0% 3% 0% 3%
-  
-  #contact-form
-    margin 0 auto
-
-  #social_container
-    margin 10% 0
-
-  .blog h1
-    font-size: 2em
-    padding: 5% 0 0
-    margin-bottom 4%
-
-  .blog blockquote
-    margin 0
-    font-size 1.2em
-
+  body
+    display initial
 
 /* 480px */
-$yellowTransition = translate(25%, -100%) scale(0.5, 0.5)
-$redTransition = translate(25%, 0%) scale(0.5,0.5)
 @media only screen and (max-width: 30em)
 
-  #container
-    margin 10% auto 0
-  
-  #tagline p
-    font-size: 2.6em
-    
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .triangle.red
-    normTransform($redTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  #logo-container
-    display: block
-    float: none
-    text-align: center
-
-  nav
-    float: none
-    margin-top: 5%
-    text-align: center
-
-  #tagline
-    margin: 5% auto 0
-    max-width 240px
-
-  #what-copy-container
-    display: block
-    width: 80%
-    margin: 0 auto
-    padding: 8% 0 0
-    text-align center
-
-  #what-copy
-    font-weight bold
-
-  #what-image-container
-    width: 100%;
-    margin: 2% 0 10% 0
-
-  #who-container
-    text-align center
-    padding-top 2%
-
-  #who-copy
-    padding 0% 2%
-    margin 15% auto 5%
-    width 100%
-    float none
-    display block
-
-  #who-image
-    float none
-    display block
-    margin 0 auto
-
-
-  #footer-social,
-  #footer-blog
-    float none
-    width 100%
-    text-align center
-    margin 5% auto
-
-  .last-paragraph
-    padding-top 5%
-
-
+  body
+    display initial
 
 /* 320px */
-$yellowTransition = translate(10%, -100%) scale(0.5, 0.5)
-$redTransition = translate(12%, 0%) scale(0.5,0.5)
 @media only screen and (max-width: 20em)
 
-  .triangle.yellow
-    normTransform($yellowTransition)
-
-  .triangle.red
-    normTransform($redTransition)
-
-  .blue
-    normTransform($blueTransition)
-
-  nav
-    margin-top: 9%
-
-
-  #what-image-container
-    width: 100%;
-    margin: 5% 0 10% 0
-
-
-
+  body
+    display initial
 
