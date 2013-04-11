@@ -78,6 +78,12 @@ function smoosher(){
       
 }
 
-// // Concat/minify
-cleaner()
-setTimeout(smoosher,750) // pure laziness...
+// Increment the package.json.version first...
+semverUtil.incrementVersion( pkgjsonPath, 'build', function(){
+
+  // // Concat/minify
+  cleaner()
+  setTimeout(smoosher,750) // pure laziness...
+
+})
+

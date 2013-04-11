@@ -1,7 +1,7 @@
 {
   "name": "KloutSkout",
   "description": "Find Klout scores by twitter name.",
-  "version": "0.0.1-1",
+  "version": "0.0.1-2",
   "private": true,
   "scripts": {
     "start": "node app.js",
