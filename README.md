@@ -7,11 +7,11 @@ Installation
 ---
 
 ```sh
-	git clone [git-repo-url] kloutskout
-	cd kloutskout
-	npm i -d
-	node app
-	open http://127.0.0.1:3500
+git clone [git-repo-url] kloutskout
+cd kloutskout
+npm i -d
+node app
+open http://127.0.0.1:3500
 ```
 
 License
