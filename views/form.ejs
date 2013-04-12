@@ -1,19 +1,35 @@
 <section role="form" class="maxwidthcenter">
 
-	<div id="contact-form-container">
-	  <form id="contact-form" action="/api/1/getSingleKloutScore" enctype="multipart/form-data" method="POST">
+	<div class="form-container">
+	  <form id="get-single-score-form" action="/api/1/getSingleKloutScore" enctype="multipart/form-data" method="POST">
 	    <fieldset>
 	      <div class="form-item">
 	          <input name="twitter-username" type="name" required="true" value="" placeholder="Name"></input>
 	      </div>
 	      <div class="form-item">
-	        <button id="connect-button"><span>Get Klout Score!</span></button>
+	        <button class="form-button" id="single-score-button"><span>Get Klout Score!</span></button>
 	      </div>
 	    </fieldset>
 	  </form>
 	</div>
 
-	<div id="contact-response-container">
+	<div id="single-score-response-container">
+	</div>
+
+	<div class="form-container">
+	  <form id="upload-csv-form" action="/api/1/getBatchKloutScoreCsv" enctype="multipart/form-data" method="POST">
+	    <fieldset>
+	      <div class="form-item">
+	         <input name="csv-file" type="file" required="true" value=""></input>
+	      </div>
+	      <div class="form-item">
+	        <button class="form-button" id="upload-csv-button"><span>Upload CSV File!</span></button>
+	      </div>
+	    </fieldset>
+	  </form>
+	</div>
+
+	<div id="csv-form-response-container">
 	</div>
 
 </section>

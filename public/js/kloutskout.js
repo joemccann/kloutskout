@@ -14,8 +14,8 @@ $(document).ready(function(){
 
   /* Handle Signup Form ****************************************/
   
-  var $connectForm = $('#contact-form')
-    , $connectButton = $('#connect-button')
+  var $getSingleScoreForm = $('#get-single-score-form')
+    , $singleScoreButton = $('#single-score-button')
 
   function strip(html){
      var tmp = document.createElement("div")
@@ -23,11 +23,11 @@ $(document).ready(function(){
      return tmp.textContent || tmp.innerText
   }
     
-  if($connectForm.length){
+  if($getSingleScoreForm.length){
     
     var connectHandler = function(e){
 
-      $connectButton.attr('disabled', true).addClass('opacity75')
+      $singleScoreButton.attr('disabled', true).addClass('opacity75')
       
       $('.error').removeClass('error')
       
@@ -44,27 +44,27 @@ $(document).ready(function(){
           .addClass('error')
           .focus()
         
-        $connectButton.removeAttr('disabled').removeClass('opacity75')
+        $singleScoreButton.removeAttr('disabled').removeClass('opacity75')
           
         return false
         
       }       
       
       
-      $.post( $connectForm.attr('action'), $connectForm.serialize(), function(resp){
+      $.post( $getSingleScoreForm.attr('action'), $getSingleScoreForm.serialize(), function(resp){
         
         // This is a weird delta between zepto and jquery...
         var r = (typeof resp === 'string') ? JSON.parse(resp) : resp
         
         log(r)
         
-        $connectForm.find('input, textarea').val('')
+        $getSingleScoreForm.find('input, textarea').val('')
         
-        $connectButton.removeAttr('disabled').removeClass('opacity75').blur()
+        $singleScoreButton.removeAttr('disabled').removeClass('opacity75').blur()
         
         var responseMessageClass = r.error ? "failed-submission" : "successful-submission"
         
-        $('#contact-response-container').find('p').remove()
+        $('#single-score-response-container').find('p').remove()
 
         var message;
 
@@ -79,7 +79,7 @@ $(document).ready(function(){
           +Math.round(r.message)+'</strong></p>'
         }
         
-        $('#contact-response-container').append(message)
+        $('#single-score-response-container').append(message)
         
       }) // end post
       
@@ -87,14 +87,14 @@ $(document).ready(function(){
       
     }
     
-    $connectButton.on('click', function(e){
+    $singleScoreButton.on('click', function(e){
       connectHandler(e)
       e.preventDefault()
       return false
 
     }) // end click()
     
-    $connectForm.on('submit', function(e){
+    $getSingleScoreForm.on('submit', function(e){
       connectHandler(e)
       e.preventDefault()
       return false

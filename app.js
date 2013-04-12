@@ -28,8 +28,9 @@ app.configure(function(){
   app.use(express.favicon())
   app.use(express.logger(app.locals.env === 'production' ? 'tiny' : 'dev' ))
   app.use(express.compress())
-  app.use(express.bodyParser())
+  app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname + "/public/uploads"}))
   app.use(express.methodOverride())
+
   app.use(app.router)
   app.use(require('stylus').middleware(__dirname + '/public'))
 
@@ -69,6 +70,16 @@ app.post('/api/1/getSingleKloutScore', function(req,res,next){
 
   })
   
+})
+
+app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
+  
+  var csv = req.files['csv-file']
+
+  // File is upload to /public/uploads dir
+
+  res.send('uploaded')
+
 })
 
 // Fire up server...
