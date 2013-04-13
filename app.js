@@ -32,7 +32,7 @@ app.configure(function(){
   app.use(express.favicon())
   app.use(express.logger(app.locals.env === 'production' ? 'tiny' : 'dev' ))
   app.use(express.compress())
-  app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname + "/public/uploads"}))
+  app.use(express.bodyParser({keepExtensions: true, uploadDir: __dirname + "/public/uploads", encoding: 'utf-8'}))
   app.use(express.methodOverride())
 
   app.use(app.router)
@@ -47,6 +47,35 @@ app.configure('development', function(){
 })
 
 app.get('/', routes.index)
+
+app.get('/api/1/getSingleKloutScore', function(req,res,next){
+
+  if(!req.query['twitter-username']) return res.json({message: "Name required.", error: true})
+
+  var name = req.query['twitter-username'].replace(/<(?:.|\n)*?>/gm, '')
+    
+  KloutSkout.getKloutScore(name, function getKloutScoreCb(err,data){
+    // data is a json object
+
+    // We set this up first...
+    var json = {
+      username: name,
+      message: "There was some sort of error. Please try again", 
+      error: true
+    }
+
+    // If no error, then change that shit, B
+    if(!err) {
+      json.message = data[name].score
+      json.error = false
+     }
+
+    return res.json(json)
+
+  }) // end getKloutScore
+
+})
+
 
 app.post('/api/1/getSingleKloutScore', function(req,res,next){
   
@@ -72,7 +101,7 @@ app.post('/api/1/getSingleKloutScore', function(req,res,next){
 
     return res.json(json)
 
-  })
+  }) // end getKloutScore
   
 })
 
@@ -86,13 +115,13 @@ app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
     , outerdata = ''
     ;
 
-  rStream.on('readable', function(){
+  rStream.on('readable', function readStreamReadableCb(){
     while (data = rStream.read()){
       if(data) outerdata += data
     }
   })
 
-  rStream.on('end', function(){
+  rStream.on('end', function readStreamEndCb(){
 
     var usernamesArray = csvUtil.getArrayFromCsv(outerdata)
 
@@ -121,8 +150,7 @@ app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
       
       return res.json(json)
 
-    })
-
+    }) // end getKloutScores()
 
   }) // end end()
 
