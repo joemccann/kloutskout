@@ -94,11 +94,35 @@ app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
 
   rStream.on('end', function(){
 
-    var arr = csvUtil.getArrayFromCsv(outerdata)
+    var usernamesArray = csvUtil.getArrayFromCsv(outerdata)
 
-    // Now, let's process the array of handles
+    // First, create array of Klout URLS.
+    // Klout only allows for up to 99 usernames in one request...
 
-    res.send(arr.toString())
+    var urls = KloutSkout.getKloutUrls(usernamesArray)
+
+    KloutSkout.getKloutScores(urls,function getKloutScoresCb(err, data){
+
+      // We set this up first...
+      var json = {
+        scores: null,
+        message: "There was some sort of error. Please try again", 
+        error: true
+      }
+
+      // If no error, then change that shit, B
+      if(!err) {
+        json.scores = data
+        json.message = "Here are the Klout Scores."
+        json.error = false
+       }
+
+       // eventuall do this:  var addedToSet = kloutSkout.addKloutScoreToSet(signups, handles, data)
+
+      return res.json(json)
+
+    })
+
 
   }) // end end()
 
