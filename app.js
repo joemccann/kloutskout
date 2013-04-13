@@ -101,6 +101,8 @@ app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
 
     var urls = KloutSkout.getKloutUrls(usernamesArray)
 
+    // return console.dir(urls)
+
     KloutSkout.getKloutScores(urls,function getKloutScoresCb(err, data){
 
       // We set this up first...
@@ -116,9 +118,7 @@ app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
         json.message = "Here are the Klout Scores."
         json.error = false
        }
-
-       // eventuall do this:  var addedToSet = kloutSkout.addKloutScoreToSet(signups, handles, data)
-
+      
       return res.json(json)
 
     })
