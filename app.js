@@ -7,7 +7,9 @@ var express = require('express')
   , routes = require('./routes')
   , http = require('http')
   , path = require('path')
+  , fs = require('fs')
   , KloutSkout = require('./lib')
+  , csvUtil = require( path.resolve( __dirname, 'util/csv-util.js') )
   ;
 
 var app = express()
@@ -23,6 +25,8 @@ app.configure(function(){
   app.locals.env = process.env.NODE_ENV
   
   app.set('port', process.env.PORT || 3500)
+  // to be used when creating read stream for CSV file
+  app.set('uploads-path', path.resolve(__dirname + "/public/uploads")) 
   app.set('views', __dirname + '/views')
   app.set('view engine', 'ejs')
   app.use(express.favicon())
@@ -76,9 +80,27 @@ app.post('/api/1/getBatchKloutScoreCsv', function(req,res,next){
   
   var csv = req.files['csv-file']
 
-  // File is upload to /public/uploads dir
+  // File is uploaded to /public/uploads dir
 
-  res.send('uploaded')
+  var rStream = fs.createReadStream( csv.path, {encoding: 'utf-8'} )
+    , outerdata = ''
+    ;
+
+  rStream.on('readable', function(){
+    while (data = rStream.read()){
+      if(data) outerdata += data
+    }
+  })
+
+  rStream.on('end', function(){
+
+    var arr = csvUtil.getArrayFromCsv(outerdata)
+
+    // Now, let's process the array of handles
+
+    res.send(arr.toString())
+
+  }) // end end()
 
 })
 
